@@ -1,91 +1,41 @@
-const DataTable = () => {
-  return (
-      <div className="table-responsive">
-        <table className="table table-striped table-sm">
-            <thead>
-                <tr>
-                    <th>Data</th>
-                    <th>Vendedor</th>
-                    <th>Clientes visitados</th>
-                    <th>Negócios fechados</th>
-                    <th>Valor</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>22/04/2021</td>
-                    <td>Barry Allen</td>
-                    <td>34</td>
-                    <td>25</td>
-                    <td>15017.00</td>
-                </tr>
-                <tr>
-                    <td>22/04/2021</td>
-                    <td>Barry Allen</td>
-                    <td>34</td>
-                    <td>25</td>
-                    <td>15017.00</td>
-                </tr>
-                <tr>
-                    <td>22/04/2021</td>
-                    <td>Barry Allen</td>
-                    <td>34</td>
-                    <td>25</td>
-                    <td>15017.00</td>
-                </tr>
-                <tr>
-                    <td>22/04/2021</td>
-                    <td>Barry Allen</td>
-                    <td>34</td>
-                    <td>25</td>
-                    <td>15017.00</td>
-                </tr>
-                <tr>
-                    <td>22/04/2021</td>
-                    <td>Barry Allen</td>
-                    <td>34</td>
-                    <td>25</td>
-                    <td>15017.00</td>
-                </tr>
-                <tr>
-                    <td>22/04/2021</td>
-                    <td>Barry Allen</td>
-                    <td>34</td>
-                    <td>25</td>
-                    <td>15017.00</td>
-                </tr>
-                <tr>
-                    <td>22/04/2021</td>
-                    <td>Barry Allen</td>
-                    <td>34</td>
-                    <td>25</td>
-                    <td>15017.00</td>
-                </tr>
-                <tr>
-                    <td>22/04/2021</td>
-                    <td>Barry Allen</td>
-                    <td>34</td>
-                    <td>25</td>
-                    <td>15017.00</td>
-                </tr>
-                <tr>
-                    <td>22/04/2021</td>
-                    <td>Barry Allen</td>
-                    <td>34</td>
-                    <td>25</td>
-                    <td>15017.00</td>
-                </tr>
-                <tr>
-                    <td>22/04/2021</td>
-                    <td>Barry Allen</td>
-                    <td>34</td>
-                    <td>25</td>
-                    <td>15017.00</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-  )
-}
+import DataTable from 'react-data-table-component';
 
-export default DataTable;
+
+// const DataTableJoe = () => {
+  const columns = [
+  {
+        name: 'Title',
+        selector: row => row.title,
+  },
+  {
+      name: 'Year',
+      selector: row => row.year,
+  },
+  ];
+
+  const data = [
+  {
+      id: 1,
+      title: 'Beetlejuice',
+      year: '1988',
+  },
+  {
+    id: 2,
+    title: 'Ghostbusters',
+    year: '1984',
+  },
+  ]
+
+function DataTableJoe() {
+    return (
+        <DataTable
+            columns={columns}
+            data={data}
+        />
+    );
+};
+
+
+// }
+
+export default DataTableJoe;
